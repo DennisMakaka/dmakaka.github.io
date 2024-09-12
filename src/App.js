@@ -1,10 +1,8 @@
 import React from 'react';
-import Navbar from './components/Navbar';  // Importing the Navbar component
-import Footer from './components/Footer';  // Importing the Footer component
 import AppRoutes from './routes';  // Import the routing component
 
 function App() {
-    // Internal styles using JavaScript objects
+    // Internal styles using JavaScript objects (optional if you need custom layout)
     const appStyle = {
         display: 'flex',
         flexDirection: 'column',
@@ -16,24 +14,14 @@ function App() {
         padding: '20px',
     };
 
-    const footerStyle = {
-        backgroundColor: '#f8f9fa',
-        padding: '10px',
-        textAlign: 'center',
-    };
-
     return (
         <div style={appStyle}>
-            <Navbar />  {/* Navbar at the top */}
+            {/* Main content rendered by AppRoutes */}
             <main style={mainStyle}>
-                <AppRoutes />  {/* Routes render the main content here */}
+                <AppRoutes />
             </main>
-            <footer style={footerStyle}>
-                <Footer />  {/* Footer at the bottom */}
-            </footer>
         </div>
     );
 }
 
 export default App;
-
